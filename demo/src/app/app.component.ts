@@ -8,11 +8,10 @@ import { NgxLoadingBar, LoadingBarService } from '@ngx-loading-bar/core';
 import { NGX_LOADING_BAR_IGNORED } from '@ngx-loading-bar/http-client';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: true,
-  imports: [AsyncPipe, MatProgressBarModule, MatSnackBarModule, NgxLoadingBar, RouterModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    imports: [AsyncPipe, MatProgressBarModule, MatSnackBarModule, NgxLoadingBar, RouterModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   constructor(

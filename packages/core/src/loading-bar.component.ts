@@ -3,18 +3,17 @@ import { LoadingBarService } from './loading-bar.service';
 import { AsyncPipe, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'ngx-loading-bar',
-  standalone: true,
-  imports: [AsyncPipe, NgIf],
-  preserveWhitespaces: false,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.Emulated,
-  styleUrls: ['./loading-bar.component.scss'],
-  templateUrl: './loading-bar.component.html',
-  host: {
-    '[attr.fixed]': 'fixed',
-    '[style.color]': 'color',
-  },
+    selector: 'ngx-loading-bar',
+    imports: [AsyncPipe, NgIf],
+    preserveWhitespaces: false,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.Emulated,
+    styleUrls: ['./loading-bar.component.scss'],
+    templateUrl: './loading-bar.component.html',
+    host: {
+        '[attr.fixed]': 'fixed',
+        '[style.color]': 'color',
+    }
 })
 export class NgxLoadingBar {
   @Input() includeSpinner = true;
