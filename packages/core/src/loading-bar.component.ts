@@ -13,9 +13,9 @@ import { AsyncPipe, NgIf } from '@angular/common';
     host: {
         '[attr.fixed]': 'fixed',
         '[style.color]': 'color',
-    }
+    },
 })
-export class NgxLoadingBar {
+export class LoadingBarComponent {
   @Input() includeSpinner = true;
   @Input() includeBar = true;
   @Input() fixed = true;

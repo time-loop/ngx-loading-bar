@@ -2,7 +2,7 @@ import { waitForAsync, ComponentFixture, TestBed, inject } from '@angular/core/t
 import { Subject } from 'rxjs';
 
 import { LoadingBarService } from './loading-bar.service';
-import { LoadingBarComponent } from './core.module';
+import { LoadingBarComponent } from './loading-bar.component';
 
 describe('LoadingBarComponent', () => {
   let component: LoadingBarComponent, fixture: ComponentFixture<LoadingBarComponent>, loader: MockLoadingBarService;
@@ -11,7 +11,7 @@ describe('LoadingBarComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [LoadingBarComponent],
+      imports: [LoadingBarComponent],
       providers: [{ provide: LoadingBarService, useClass: MockLoadingBarService }],
       teardown: { destroyAfterEach: false },
     }).compileComponents();

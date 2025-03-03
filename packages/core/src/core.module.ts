@@ -1,25 +1,8 @@
-import { ChangeDetectionStrategy, Component, NgModule, ViewEncapsulation } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NgxLoadingBar } from './loading-bar.component';
-
-@Component({
-    selector: 'ngx-loading-bar',
-    preserveWhitespaces: false,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.Emulated,
-    styleUrls: ['./loading-bar.component.scss'],
-    templateUrl: './loading-bar.component.html',
-    host: {
-        '[attr.fixed]': 'fixed',
-        '[style.color]': 'color',
-    },
-    standalone: false
-})
-export class LoadingBarComponent extends NgxLoadingBar {}
+import { NgModule } from '@angular/core';
+import { LoadingBarComponent } from './loading-bar.component';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [LoadingBarComponent],
+  imports: [LoadingBarComponent],
   exports: [LoadingBarComponent],
 })
 export class LoadingBarModule {}
